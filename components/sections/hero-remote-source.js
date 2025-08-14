@@ -4,10 +4,9 @@ import { useSiteConfiguration } from '@/lib/context/SiteConfigurationContext'
 
 import Button from '@/components/blocks/button'
 
-export default function HeroRemoteSource({ buttons, image, title, description }) {
+export default function HeroRemoteSource({ buttons, image, title, description, brandfolderAssetRemote }) {
   const siteConfig = useSiteConfiguration()
   const theme = useTheme()
-
   return (
     <Box 
       position="relative" 
@@ -71,8 +70,8 @@ export default function HeroRemoteSource({ buttons, image, title, description })
               h="100%"
             >
               <Image
-                src={image.url}
-                alt={image.alt}
+                src={`${brandfolderAssetRemote.data.attributes.cdn_url}?width=900&height=900`}
+                alt={"Brandfolder Asset"}
                 layout="fill"
                 objectFit="cover"
                 objectPosition="center"

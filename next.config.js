@@ -12,18 +12,14 @@ module.exports = {
     remotePatterns: [
       {
         protocol: 'https',
-        hostname: '**.graphassets.com',
+        hostname: '**',
       },
       {
         protocol: 'http',
-        hostname: 'res.cloudinary.com',
-      },
-      {
-        protocol: 'https',
-        hostname: 'res.cloudinary.com',
+        hostname: '**',
       }
     ],
-    // Deprecate domain after asset migration
-    domains: ['media.graphassets.com']
+    // Allow all domains for maximum flexibility
+    domains: ['*']
   },
 }
